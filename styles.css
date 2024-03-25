@@ -60,7 +60,8 @@ color: white
 
 button{
     border-radius: 20px;
-    border: 3px solid white
+    border: 3px solid white;
+    font-weight: bold;
 }
 button:hover{
     border-radius: 10px;
@@ -78,7 +79,6 @@ button:hover{
 }
 .clear{
     background-color: red;
-    font-weight: bold;
     font-size: 20px;
     color: white;
 }
@@ -86,7 +86,6 @@ button:hover{
 .operator{
     color: white;
     background-color: black;
-    font-weight: bold;
 }
 .number,.decimal{
     color: black;
