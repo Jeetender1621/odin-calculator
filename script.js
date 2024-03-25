@@ -39,6 +39,7 @@ function appendDigit(digit) {
         currentValue = '0'; // Add leading zero if decimal point is entered first
     }
     currentValue += digit;
+    currentDisplay.style.color = 'black';
     updateDisplay();
 }
 
