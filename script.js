@@ -22,12 +22,6 @@ function clearDisplay() {
     currentDisplay.style.color = 'black';
 }
 
-// Function to append a digit to the current value
-function appendDigit(digit) {
-    if (digit === '.' && currentValue.includes('.')) return; // Prevent multiple decimal points
-    currentValue += digit;
-    updateDisplay();
-}
 
 // Function to set the operator
 function setOperator(op) {
