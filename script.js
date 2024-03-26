@@ -34,6 +34,9 @@ function setOperator(op) {
 }
 
 function appendDigit(digit) {
+    if(currentDisplay.style.color = 'red'){
+        currentValue = '';
+    }
     if (digit === '.' && currentValue.includes('.')) return; // Prevent multiple decimal points
     if (digit === '.' && currentValue === '') {
         currentValue = '0'; // Add leading zero if decimal point is entered first
