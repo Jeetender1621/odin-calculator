@@ -49,9 +49,13 @@ color: white
     color:rgb(101, 99, 99);
 }
 .current{
-    font-size: 30px;
+    font-size: 25px;
     color: black;
     font-weight: 500;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap;
+    max-width: 100%; /* Ensure the display doesn't overflow its container */
+    padding-right: 10px;/* Add some padding to ensure space for the scrollbar */
 }
 .buttons-row{
   display: flex;

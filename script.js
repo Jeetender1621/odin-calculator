@@ -25,6 +25,11 @@ function clearDisplay() {
 
 // Function to set the operator
 function setOperator(op) {
+    if(currentDisplay.style.color === 'red'){
+        previousValue = '';
+        currentValue = '';
+        operator = '';
+    }
     if (currentValue === '') return; // No current value to operate on
     if (previousValue !== '') calculate(); // Calculate previous operation if present
     operator = op;
@@ -34,8 +39,10 @@ function setOperator(op) {
 }
 
 function appendDigit(digit) {
-    if(currentDisplay.style.color = 'red'){
+    if(currentDisplay.style.color === 'red'){
+        previousValue = '';
         currentValue = '';
+        operator = '';
     }
     if (digit === '.' && currentValue.includes('.')) return; // Prevent multiple decimal points
     if (digit === '.' && currentValue === '') {
@@ -48,7 +55,7 @@ function appendDigit(digit) {
 
 // Function to perform calculation based on operator
 function calculate() {
-    if (operator === '') return; // No operator set
+    if (operator === '' || currentValue === '') return; // No operator set
     let result;
     const prev = parseFloat(previousValue);
     const current = parseFloat(currentValue);
